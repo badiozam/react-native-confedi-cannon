@@ -1,10 +1,10 @@
 {
-  "name": "react-native-confetti-cannon",
-  "version": "1.5.2",
+  "name": "react-native-confedi-cannon",
+  "version": "1.5.2-1.0.1",
   "description": "React Native confetti explosion and fall like iOS does.",
-  "homepage": "https://github.com/vincentcatillon/react-native-confetti-cannon",
+  "homepage": "https://github.com/badiozam/react-native-confedi-cannon",
   "bugs": {
-    "url": "https://github.com/vincentcatillon/react-native-confetti-cannon/issues",
+    "url": "https://github.com/badiozam/react-native-confedi-cannon/issues",
     "email": "contact@vincent-catillon.fr"
   },
   "keywords": [
