@@ -14,6 +14,10 @@ type Props = {|
     x: number,
     y: number
   },
+  minWidth?: number,
+  maxWidth?: number,
+  minHeight?: number,
+  maxHeight?: number,
   explosionSpeed?: number,
   fallSpeed?: number,
   colors?: Array<string>,
@@ -178,7 +182,7 @@ class Explosion extends React.PureComponent<Props, State> {
   };
 
   render() {
-    const { origin, fadeOut } = this.props;
+    const { origin, fadeOut, minWidth = 8, maxWidth = 16, minHeight = 6, maxHeight = 12, } = this.props;
     const { items } = this.state;
     const { height, width } = Dimensions.get('window');
 
@@ -223,6 +227,10 @@ class Explosion extends React.PureComponent<Props, State> {
           return (
             <Confetti
               color={item.color}
+              minWidth={minWidth}
+              maxWidth={maxWidth}
+              minHeight={minHeight}
+              maxHeight={maxHeight}
               containerTransform={containerTransform}
               transform={transform}
               opacity={opacity}

@@ -24,12 +24,14 @@ type Props = {|
 
 class Confetti extends React.PureComponent<Props> {
   props: Props;
-  width: number = randomValue(8, 16);
-  height: number = randomValue(6, 12);
+  // width: number = randomValue(8, 16);
+  // height: number = randomValue(6, 12);
+  width: number = randomValue(this.props.minWidth, this.props.maxWidth);
+  height: number = randomValue(this.props.minHeight, this.props.maxHeight);
   isRounded: boolean = Math.round(randomValue(0, 1)) === 1;
 
   render() {
-    const { containerTransform, transform, opacity, color } = this.props;
+    const { containerTransform, transform, opacity, color, minWidth, maxWidth, minHeight, maxHeight } = this.props;
     const { width, height, isRounded } = this;
     const containerStyle = { transform: containerTransform };
     const style = { width, height, backgroundColor: color, transform, opacity};
